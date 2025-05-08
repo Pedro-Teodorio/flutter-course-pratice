@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Layout com Row e Column',
       home: Scaffold(
-        appBar: AppBar(title: AppBar(title: const Text('Row e Column'))),
+        appBar: AppBar(title: const Text('Row e Column')),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -55,10 +55,13 @@ class MyApp extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               Row(
-                spacing: 16,
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: [Icon(Icons.share), Text('Compartilhar')],
+                children: [
+                  Icon(Icons.share),
+                  SizedBox(width: 8),
+                  Text('Compartilhar'),
+                ],
               ),
             ],
           ),
